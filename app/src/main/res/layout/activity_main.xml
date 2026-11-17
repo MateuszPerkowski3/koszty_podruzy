@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator Podróży"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autor: Imię Nazwisko" />
+
+        <EditText
+            android:id="@+id/etDystans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dystans (km)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etSpalanie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Spalanie (l/100km)"
+            android:inputType="numberDecimal" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbBenzyna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Benzyna (6,50 zł/l)" />
+
+            <RadioButton
+                android:id="@+id/rbDiesel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diesel (6,70 zł/l)" />
+
+            <RadioButton
+                android:id="@+id/rbLpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LPG (3,10 zł/l)" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etPasazerowie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Liczba pasażerów"
+            android:inputType="number"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btnOblicz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OBLICZ KOSZT" />
+
+        <TextView
+            android:id="@+id/tvWynik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
